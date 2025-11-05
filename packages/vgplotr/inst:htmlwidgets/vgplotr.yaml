@@ -1,0 +1,6 @@
+dependencies:
+  - name: vgplot
+    version: 0.21.1
+    src: lib/vgplot
+    script: 
+      - https://cdn.jsdelivr.net/npm/@uwdata/vgplot@0.21.1/+esm

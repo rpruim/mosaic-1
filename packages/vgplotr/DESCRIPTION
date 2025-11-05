@@ -1,0 +1,19 @@
+Package: vgplotr
+Title: R Interface to vgplot for Interactive Mosaic Visualizations
+Version: 0.1.0
+Authors@R: 
+    person("Your", "Name", , "your.email@example.com", role = c("aut", "cre"))
+Description: Provides an R interface to the vgplot JavaScript library for 
+    creating interactive Mosaic-powered visualizations using htmlwidgets.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports:
+    htmlwidgets (>= 1.6.0),
+    jsonlite,
+    htmltools
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

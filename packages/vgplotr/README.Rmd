@@ -1,0 +1,62 @@
+---
+output: html_document
+embed-resources: true
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# vgplotr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of vgplotr is to ...
+
+## Installation
+
+You can install the development version of vgplotr from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("uwdata/mosaic")
+```
+
+## Examples
+
+### Basic scatter plot
+
+```{r}
+library(vgplotr)
+
+data(mtcars)
+vgplot(mtcars) |>
+  add_mark(vg_dot(x = "wt", y = "mpg", fill = "red"))
+```
+
+### Bar chart
+
+```{r}
+data(iris)
+iris_summary <- aggregate(Sepal.Length ~ Species, iris, mean)
+vgplot(iris_summary) |>
+  add_mark(vg_bar(x = "Species", y = "Sepal.Length"))
+```
+
+### Line chart with custom dimensions
+
+```{r}
+vgplot(data.frame(x = 1:10, y = (1:10)^2)) |>
+  add_mark(vg_line(x = "x", y = "y", stroke = "blue")) |>
+  add_mark(vg_width(600)) |>
+  add_mark(vg_height(400))
+
+```
